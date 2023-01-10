@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package com.ankr.ssvnetworkcontractor;
+
+option java_package = "com.ankr.proto";
+option java_outer_classname = "SSVNetworkContractorProto";
+
+option go_package = "./;proto";
+
+/**
+ *  _____       _   _ _   _
+ * | ____|_ __ | |_(_) |_(_) ___  ___
+ * |  _| | '_ \| __| | __| |/ _ \/ __|
+ * | |___| | | | |_| | |_| |  __/\__ \
+ * |_____|_| |_|\__|_|\__|_|\___||___/
+ *
+ **/
+
+/**
+ *        ____  ____   ____
+ *   __ _|  _ \|  _ \ / ___|
+ *  / _` | |_) | |_) | |
+ * | (_| |  _ <|  __/| |___
+ *  \__, |_| \_\_|    \____|
+ *  |___/
+ *
+ **/
+
+service SSVNetworkContractor {
+  rpc RegisterValidatorKey(RegisterValidatorKeyRequest) returns (RegisterValidatorKeyReply);
+}
+
+message RegisterValidatorKeyRequest {
+  string keystore = 1;
+}
+message RegisterValidatorKeyReply {
+}
