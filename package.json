@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "generate:proto": "proto-loader-gen-types --outDir ./src/generated/ --grpcLib @grpc/grpc-js proto/ssv-network-contractor.proto",
-    "generate:abi": "./abi.bash",
+    "generate:abi": "bash abi.bash",
     "postinstall": "npm run generate:proto && npm run generate:abi",
     "prebuild": "rimraf dist",
     "build": "nest build",
