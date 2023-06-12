@@ -5,8 +5,8 @@
 ```bash
 cp .env-example .env
 ```
-2. Put private key of key registerer and etherscan API key into `.env`
-3. Install dependecies, download abis
+2. Put private key of key registerer into `.env`
+3. Install dependencies, download ABIs
 ```bash
 yarn
 ```
