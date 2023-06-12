@@ -6,10 +6,9 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "init:proto": "git submodule update --init --remote",
     "generate:proto": "proto-loader-gen-types --outDir ./src/generated/ --grpcLib @grpc/grpc-js proto/ssv-network-contractor.proto",
     "generate:abi": "./abi.bash",
-    "postinstall": "npm run init:proto && npm run generate:proto && npm run generate:abi",
+    "postinstall": "npm run generate:proto && npm run generate:abi",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
