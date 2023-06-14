@@ -28,6 +28,8 @@ option go_package = "./;proto";
 
 service SSVNetworkContractor {
   rpc RegisterValidatorKey(RegisterValidatorKeyRequest) returns (RegisterValidatorKeyReply);
+  rpc RemoveValidatorKey(RemoveValidatorKeyRequest) returns (RemoveValidatorKeyReply);
+  rpc IsValidatorRegistered(IsValidatorRegisteredRequest) returns (IsValidatorRegisteredReply);
 }
 
 message RegisterValidatorKeyRequest {
@@ -35,3 +37,26 @@ message RegisterValidatorKeyRequest {
 }
 message RegisterValidatorKeyReply {
 }
+
+message RemoveValidatorKeyRequest {
+  string pubkey = 1;
+}
+
+message RemoveValidatorKeyReply {
+}
+
+message IsValidatorRegisteredRequest {
+  string pubkey = 1;
+}
+message IsValidatorRegisteredReply {
+  bool registered = 1;
+}
+
+/**
+ *  _  __      __ _
+ * | |/ /__ _ / _| | ____ _
+ * | ' // _` | |_| |/ / _` |
+ * | . \ (_| |  _|   < (_| |
+ * |_|\_\__,_|_| |_|\_\__,_|
+ *
+ **/

@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { ContractService } from './contract/contract.service';
+import { OperatorService } from './operator/operator.service';
 import configuration from './config/configuration';
 
 @Module({
@@ -14,6 +15,6 @@ import configuration from './config/configuration';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService, ContractService],
+  providers: [AppService, ContractService, OperatorService],
 })
 export class AppModule {}

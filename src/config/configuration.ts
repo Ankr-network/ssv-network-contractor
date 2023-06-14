@@ -1,6 +1,7 @@
 export default () => ({
   RPC_HOST: process.env.RPC_HOST,
   SSV_NETWORK_ADDRESS: process.env.SSV_NETWORK_ADDRESS,
+  SSV_NETWORK_VIEWS_ADDRESS: process.env.SSV_NETWORK_VIEWS_ADDRESS,
   OPERATOR_IDS: process.env.OPERATOR_IDS,
   SSV_API: process.env.SSV_API,
   GRPC_ADDRESS: process.env.GRPC_ADDRESS,
@@ -8,7 +9,8 @@ export default () => ({
   OPERATOR_PRIV_KEY: process.env.OPERATOR_PRIV_KEY,
   TX_WAIT_TIME: parseInt(process.env.TX_WAIT_TIME, 10),
   KEYSTORE_PASSWORD: process.env.KEYSTORE_PASSWORD,
-  OPERATION_PERIOD: parseInt(process.env.OPERATION_PERIOD), // in blocks
+  OPERATION_PERIOD: parseInt(process.env.OPERATION_PERIOD) || 630000, // 7k blocks (per day) * 3 months
   SSV_TOKEN_ADDRESS: process.env.SSV_TOKEN_ADDRESS,
   SSV_APPROVE_LIMIT: process.env.SSV_APPROVE_LIMIT,
+  CONSENSUS_NETWORK: process.env.CONSENSUS_NETWORK,
 });
